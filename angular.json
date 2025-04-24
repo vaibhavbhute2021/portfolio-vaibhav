@@ -23,8 +23,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/vaibs-portfolio",
-            "baseHref": "/VaibhavBhute/",
+            "outputPath": "dist/portfolio-vaibhav",
+            "baseHref": "/portfolio-vaibhav/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
