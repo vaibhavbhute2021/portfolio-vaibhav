@@ -1,0 +1,283 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+.section-title{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.aboutme h2 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.aboutme h2 img {
+    margin-left: 10px;
+}
+
+.aboutme p {
+  
+ 
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+
+}
+
+container{
+  text-align: center;
+  height: 100vh
+}
+
+
+@media (max-width: 768px) {
+  
+    .aboutme h2 {
+        font-size: 1.5rem;
+    }
+
+    .aboutme p {
+        font-size: 0.8rem;
+    }
+}
+
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+  }
+  
+  .button::before,
+  .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
+  }
+  
+  .button::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+  
+  .button::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+  
+  .button:active,
+  .button:focus {
+    outline: none;
+  }
+  
+  .button:active::before,
+  .button:active::after {
+    right: 3px;
+    left: 3px;
+  }
+  
+  .button:active::before {
+    top: 3px;
+  }
+  
+  .button:active::after {
+    bottom: 3px;
+  }
+  
+  .button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f1923;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  
+  .button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+  }
+  
+  .button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+  }
+  
+  .button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #ff4655;
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+  
+  .button_text {
+    position: relative;
+  }
+  
+  .button:hover {
+    color: #0f1923;
+  }
+  
+  .button:hover .button_sl {
+    width: calc(100% + 15px);
+  }
+  
+  .button:hover .button_lg::after {
+    background-color: #fff;
+  }
+
+.aboutme{
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.aboutme.is-visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+
+.aboutme.is-hidden {
+  opacity: 0;
+  transform: translateY(-100px); 
+}
+ */
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* About Me Heading */
+.aboutme h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* About Me Paragraph */
+.aboutme {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  
+   /* Add padding for better readability */
+}
+
+/* Button Styling */
+.button {
+  
+  position: relative;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #0f1923;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  margin: 1rem auto; /* Center button horizontally */
+}
+
+/* Button Hover Effect */
+.button:hover {
+  background-color: #ff4655;
+  color: white;
+}
+
+/* Center the Component Vertically */
+.container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  height: auto;
+  scroll-margin-top: 100px; /* Ensure smooth scrolling */
+  /* text-align: center; */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px; /* Reduce title font size for smaller screens */
+  }
+
+  .aboutme h2 {
+    font-size: 2 rem; /* Adjust heading size for mobile */
+    margin-bottom: 0.8rem;
+  }
+
+  .aboutme p {
+    font-size: 1.5rem; /* Scale down paragraph font */
+    line-height: 1.4;
+    padding: 0 2rem; /* Reduce padding for smaller screens */
+  }
+
+  .button {
+    width: 80%; /* Make the button span more space on mobile */
+    font-size: 12px; /* Reduce button text size */
+  }
+}
+
+/* Animation for Visibility */
+.aboutme {
+  opacity: 0;
+  transform: translateY(-100px); /* Slide in from the top */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.aboutme.is-visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to normal position */
+}
+
+/* Scroll to Centered Section */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling when links are clicked */
+}

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .col-md-8{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .card{
+    width: 100%;
+    height: fit-content;  
+    opacity: 0;
+  transform: translateY(-100px); 
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  /* State when the card is visible (in the viewport) */
+.card.is-visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to normal position */
+}
+
+/* State when the card is not visible (out of the viewport) */
+.card.is-hidden {
+  opacity: 0;
+  transform: translateY(-100px); /* Slide out to the left */
+}
+
+ 
+
+
+.section-title{
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+h2{
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h3{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tags {
+  gap:5px;
+  justify-content: flex-start;
+}
+.tags span {
+  font-size: 12px;
+  background-color: rgb(37, 179, 32);
+  padding: 5px 10px; /* Adds padding for better touch targets */
+  border-radius: 5px; /* Smooth corners */
+}
+

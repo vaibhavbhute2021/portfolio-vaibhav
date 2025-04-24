@@ -1,0 +1,394 @@
+  @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Bungee&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+  /* .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  
+  }
+
+  a{
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .flex-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;            
+      width: 100vw; 
+      flex-wrap: wrap; 
+  }
+
+
+  .photo {
+    
+      width: 100%;
+      max-width: 280px;
+      min-width: 200px;
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+
+
+
+  .introduction {
+     flex: 1.5;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      max-width: 600px;
+  }
+
+
+
+  #logo{
+      height: 30px;
+      width: 30px;
+  }
+
+ h1{
+      font-size: 45px;
+      font-weight: lighter;
+      font-family: "Bungee", sans-serif;
+      font-style: normal;
+      color: #EE4266;
+      
+  }
+
+  h2{
+      font-size: 28px;
+      color: #41C9E2;
+      font-weight: bold;
+  }
+
+  h3{
+      font-size: 20px;
+      font-weight: bold;
+  } 
+
+  .introduction h1 {
+  font-size: 42px; 
+    font-size: 4rem; 
+    line-height: 1.2; 
+   
+    color: #EE4266;
+  
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 1.4; 
+        word-break: break-word; 
+    }
+
+    .container {
+      height: 110vh;
+    }
+
+   
+
+    .photo img {
+      width: 70%;
+      height: auto;
+    }
+
+    h3{
+      font-size: 2rem;
+    }
+
+    h2{
+      margin-bottom: 20px;
+    }
+   
+  }
+
+  .introduction h3 {
+    font-size: 24px;
+    font-weight: 500;
+
+  }
+
+  .introduction h2 {
+    font-size: 20px;
+    color: #41C9E2;
+      font-weight: bold;
+      font-family: "Audiowide", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+  }
+
+  .section-tital{
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+
+
+  .button {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      background: none;
+      color: #0f1923;
+      cursor: pointer;
+      position: relative;
+      padding: 8px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all .15s ease;
+    }
+    
+    .button::before,
+    .button::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: calc(50% - 5px);
+      border: 1px solid #7D8082;
+      transition: all .15s ease;
+    }
+    
+    .button::before {
+      top: 0;
+      border-bottom-width: 0;
+    }
+    
+    .button::after {
+      bottom: 0;
+      border-top-width: 0;
+    }
+    
+    .button:active,
+    .button:focus {
+      outline: none;
+    }
+    
+    .button:active::before,
+    .button:active::after {
+      right: 3px;
+      left: 3px;
+    }
+    
+    .button:active::before {
+      top: 3px;
+    }
+    
+    .button:active::after {
+      bottom: 3px;
+    }
+    
+    .button_lg {
+      position: relative;
+      display: block;
+      padding: 10px 20px;
+      color: #fff;
+      background-color: #0f1923;
+      overflow: hidden;
+      box-shadow: inset 0px 0px 0px 1px transparent;
+    }
+    
+    .button_lg::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 2px;
+      background-color: #0f1923;
+    }
+    
+    .button_lg::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 4px;
+      height: 4px;
+      background-color: #0f1923;
+      transition: all .2s ease;
+    }
+    
+    .button_sl {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: -1px;
+      left: -8px;
+      width: 0;
+      background-color: #ff4655;
+      transform: skew(-15deg);
+      transition: all .2s ease;
+    }
+    
+    .button_text {
+      position: relative;
+    }
+    
+    .button:hover {
+      color: #0f1923;
+    }
+    
+    .button:hover .button_sl {
+      width: calc(100% + 15px);
+    }
+    
+    .button:hover .button_lg::after {
+      background-color: #fff;
+    }
+     */
+
+     /* General Layout */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* Added padding for better aesthetics */
+  height: 100vh;
+  max-width: 100%;
+}
+
+/* Anchor Tag */
+a {
+  width: fit-content;
+  height: fit-content;
+  text-decoration: none;
+}
+
+/* Flex Container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+  justify-content: center;
+  gap: 1.5rem; /* Adds spacing between items */
+  width: 100%; /* Prevents overflow */
+  height: auto; /* Allows content to adjust height */
+}
+
+/* Photo Section */
+.photo {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin: 0 auto; /* Centers the image */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Introduction Section */
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 600px;
+   /* Improves readability on smaller screens */
+}
+
+#logo {
+  height: 30px;
+  width: 30px;
+}
+
+/* Typography Adjustments */
+.introduction h1 {
+  font-size: 4rem; /* Scales on larger screens */
+  line-height: 1.2;
+  color: #EE4266;
+  font-family: "Rubik Mono One", monospace;
+ 
+  font-style: normal;
+  font-weight: 700;
+}
+
+.introduction h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.introduction h2 {
+  font-size: 40px;
+  color: #41C9E2;
+  font-weight: bolder;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* font-family: "Audiowide", sans-serif; */
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #0f1923;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff4655;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; /* Stacks items vertically on small screens */
+    align-items: flex-start;
+    height:auto;
+  }
+
+  .container {
+    height: auto; /* Prevents fixed height on mobile */
+  }
+
+  .photo {
+    max-width: 70%;
+    max-height: 70%; /* Adjusts image size for small screens */
+    margin-bottom: 1rem;
+  }
+
+  .introduction h1 {
+    font-size: 2.5rem; /* Reduced for smaller devices */
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .introduction h3, .introduction h2 {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    width: 100%; /* Button spans width on mobile */
+    text-align: center;
+  }
+}

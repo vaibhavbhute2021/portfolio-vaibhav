@@ -1,0 +1,121 @@
+<nav class="navbar navbar-expand-lg bg-light fixed-top d-none d-lg-flex" style="background-color: #240A34;">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-3" href="#sayHello">
+      <img id="nav_brand" src="https://i.ibb.co/TxwhJqP3/VB-TECH-NO-BG.png" alt="VB Creations">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#aboutme">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#myworks">My Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#shortExp">Experiences</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#education">Education</a>
+        </li>
+       
+        <li class="nav-item">
+          <!-- <a class="nav-link active" aria-current="page" routerLink="/Contact">Contact</a> -->
+          <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#googleFormModal">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<nav class="navbar d-lg-none" style="background-color: #ffffff;">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-3" href="#sayHello">
+      <img id="nav_brand" src="https://i.ibb.co/TxwhJqP3/VB-TECH-NO-BG.png" alt="VB Creations">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start custom-offcanvas-width" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+          <img id="nav_brand" src="https://i.ibb.co/TxwhJqP3/VB-TECH-NO-BG.png" alt="VB Creations">
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#aboutme">
+              ➤ About
+            </a>
+            <hr class="nav-divider">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#skills">
+              ➤ Skills
+            </a>
+            <hr class="nav-divider">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#myworks">
+              ➤ My Work
+            </a>
+            <hr class="nav-divider">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#shortExp">
+              ➤ Experiences
+            </a>
+            <hr class="nav-divider">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#education">
+              ➤ Education
+            </a>
+            <hr class="nav-divider">
+          </li>
+         
+          <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" routerLink="/Contact">
+              ➤ Contact
+            </a> -->
+
+            <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#googleFormModal">Contact Us</a>
+
+            <hr class="nav-divider">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="modal fade" id="googleFormModal" tabindex="-1" aria-labelledby="googleFormLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="googleFormLabel">Google Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLScagG6jiu1-vn2gNBVbYBcMKP-uKm1YJ6rXEQZoVXr4z9KFxg/viewform?usp=header" 
+          width="100%" 
+          height="600" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0">
+          Loading...
+        </iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
