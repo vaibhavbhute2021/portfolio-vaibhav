@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How To Deploy the Angular 19 Application to GitHub Pages Using angular-cli-ghpages</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <style>
+    /* Reset some default browser styles */
+    body, h1, h2, h3, p, ul, ol, li, pre {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    /* Header */
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    /* Main content container */
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 20px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    /* Section headings */
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 0.5em;
+    }
+    h3 {
+      color: #34495e;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+    /* Paragraphs */
+    p {
+      margin-bottom: 1em;
+    }
+    /* Lists */
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 1em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    /* Code formatting */
+    code {
+      background-color: #ecf0f1;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      color: #c0392b;
+    }
+    pre {
+      background-color: #ecf0f1;
+      padding: 15px;
+      overflow-x: auto;
+      border-left: 5px solid #3498db;
+      margin-bottom: 1em;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #2c3e50;
+      color: #fff;
+      margin-top: 40px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+    /* Responsive design */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .container {
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>How To Deploy the Angular 19 Application to GitHub Pages Using angular-cli-ghpages</h1>
+  </header>
+  <main class="container">
+    <img src="https://i.ibb.co/Z1F7JbCK/angular-cli-ghpages.png" alt="image" width="100%">
+    <h2>Introduction</h2>
+    <p>Angular is a powerful framework for building modern web applications. GitHub Pages provides a free and easy way to host static websites directly from a GitHub repository. In this guide, we will walk through the steps to deploy an Angular 19 application to GitHub Pages using the <code>angular-cli-ghpages</code> tool. By following these instructions, your app will be published to <code>https://&lt;your-username&gt;.github.io/&lt;your-repository&gt;</code>.</p>
+    <p>Before you begin, make sure you have the following prerequisites in place:</p>
+    <ul>
+      <li>Node.js and npm installed</li>
+      <li>An Angular 19 project (created with <code>ng new</code>)</li>
+      <li>Angular CLI installed globally (<code>npm install -g @angular/cli</code>)</li>
+      <li>Git installed and a GitHub account with a repository ready</li>
+    </ul>
+
+    <h2>Step-by-Step Guide</h2>
+
+    <!-- Step 1 -->
+
+    <h3>Step 1: Set Up Your Angular Project and initialize the git repo.</h3>
+    <p>If you haven't already created your Angular project, start by running:</p>
+    <pre><code>ng new my-angular-app</code></pre>
+    <p>Navigate into the project folder and initialize a Git repository:</p>
+    <pre><code>cd my-angular-app</code></pre>
+
+    <p>Initialize a Git repository:</p>
+    <pre><code>git init</code></pre>
+    <img src="https://i.ibb.co/tTBxy391/gitinit.png" alt="image" width="100%">
+
+
+    
+    <!-- Step 2 -->
+    <h3>Step 2: Add remote origin to your local git repo.</h3>
+    <p>The git remote add origin <i>repository-url</i> command links your local Git project to a remote repository.</p>
+    <pre><code> git remote add origin https://github.com/github-username/remote-repo-name.git
+</code></pre>
+    <ul>
+      <li><i>origin</i> is the default name for the remote.</li>
+      <li><i>remote-repo-name</i> is the link to your GitHub repo.</li>
+    </ul>
+    <img src="https://i.ibb.co/4gmnKNVt/remoteorigin.png" alt="image" width="100%">
+
+
+
+<!-- step3 -->
+<h3>Step 3: Add your changes to the git repo and commit the changes with small message.</h3>
+<pre><code>git add .
+git commit -m "Initial Commit"
+</code></pre>
+<img src="https://i.ibb.co/TzPS0kf/add-And-Commit.png" alt="image" width="100%">
+    
+
+<!-- step 4 -->
+<h3>Step 4: Set current branch to <i>main</i> and push the changes to remote repo.</h3>
+<pre><code>git branch -M main</code></pre>
+<p>Set you current branch to main. In other words, the below command will renames your current branch to main
+  <ul>
+    <li>-M stands for “move” (force rename, even if main already exists).</li>
+    <li>It's useful if your branch is named master by default and you want to switch to the modern naming convention main.</li>
+  </ul>
+</p>
+
+<pre><code>git push -u origin main</code></pre>
+<p>Now the next step is to push your local main branch changes to remote repository.
+  <ul>
+    <li>-u sets the upstream, so future pushes can just use git push. (Once we set the upstream branch, then in further git push we can only use git push). </li>
+  </ul>
+</p>
+<img src="https://i.ibb.co/1tGwwFys/push.png" alt="image" width="100%">
+   
+<!-- step 5 -->
+<h3>Step 5: Create the application Build.</h3>
+<p>Upon pushing the changes to the GitHub now it’s time to build the project. Building an Angular application means converting all your TypeScript, HTML, SCSS, and Angular code into pure, optimized HTML, CSS, and JavaScript files that browsers can actually understand and run. Building an Angular project prepares your app for production by making it small, fast, and ready for real users and browsers.</p>
+<ul>
+  <li>Compiles your TypeScript into JavaScript.</li>
+  <li>Optimizes your CSS and HTML.</li>
+  <li>Removes unused code (tree-shaking).</li>
+  <li>Compresses files (minification) for faster loading.</li>
+  <li>Creates a final version of your app inside the dist/ folder.</li>
+</ul>
+<pre><code>ng build --configuration production --base-href “https://github-username.github.io/remote-respository-name/”</code></pre>
+<b>Before Build:</b> We have a project with lots of separate files (components, services, modules, etc.) written in Angular style (TS, HTML, CSS). <br>
+<b>After Build:</b> We get a few highly optimized .html, .css, and .js files inside /dist/your-app-name/ — ready to be deployed on a server like GitHub Pages, AWS, Netlify, etc.
+<img src="https://i.ibb.co/mVVF4Rwy/build.png" alt="image" width="100%" class="mb-2">
+<p>
+Prerendered 1 static route. <br>
+Output location: F:\Upswing Assessment\Assignment\dist\assignment <br>
+<b class="text-danger">NOTE: After the output folder is created, open it in File Explorer. Then, copy all files from the browser folder and any other folders, and paste them directly into the dist folder.</b></p>
+
+<!-- step 6 -->
+<h3>Step 6: Install the angular-cli-ghpages npm package.</h3>
+<p>The next step is to Install the angular-cli-ghpages npm package, The angular-cli-ghpages tool helps you easily deploy your Angular application to GitHub Pages with just a single command.</p>
+<pre><code>npm install -g angular-cli-ghpages</code></pre>
+<img src="https://i.ibb.co/1f32wXbQ/clipages.png" alt="image" width="100%" class="mb-2">
+
+<!-- step 7 -->
+<h3>Step 7: Deploy the angular application.</h3>
+<p>The final step is to deploy your angular application on github.</p>
+<pre><code>npx angular-cli-ghpages –dir=dist/build-output-folder/github.com/github-username/remote-repo-name.git</code></pre>
+<p class="text-danger"> <b>build-output-folder:</b> This will you get when you build the project, it will display the output folder path.</p>
+<img src="https://i.ibb.co/XfYKkCQ3/deploy.png" alt="image" width="100%" class="mb-2">
+
+<!-- step 8 -->
+<h3>Step 8: Result</h3>
+<p>The final step is to deploy your angular application on github.</p>
+<pre><code>npx angular-cli-ghpages –dir=dist/build-output-folder/github.com/github-username/remote-repo-name.git</code></pre>
+<p class="text-danger"> <b>build-output-folder:</b> This will you get when you build the project, it will display the output folder path.</p>
+<img src="https://i.ibb.co/XfYKkCQ3/deploy.png" alt="image" width="100%" class="mb-2">
+<p>Wait for the deployment to complete. You should see a message like “Successfully published!” in the console when done.</p>
+
+<!-- step 9 -->
+<h3>Step 9: Verify the Deployment</h3>
+<p>After deployment, open your browser and navigate to:</p>
+<p><code>https://your-username.github.io/your-repo/</code></p>
+<p>You should see your Angular app live on GitHub Pages. If you make updates to your app in the future, just rebuild and redeploy to publish the latest version.</p>
+<img src="https://i.ibb.co/2YRLbHJn/result.png" alt="image" width="100%" class="mb-2">
+<h2>Conclusion</h2>
+<p>Deploying an Angular 19 application to GitHub Pages is straightforward with the <code>angular-cli-ghpages</code> tool. By following this guide, you can quickly share your project online without needing a dedicated server. GitHub Pages handles the hosting for free, making it an ideal solution for front-end projects. <b>Happy coding!</b></p>
+
+
+<!-- Step 3 -->
+    <!-- <h3>Step 2: Install and Configure <code>angular-cli-ghpages</code></h3>
+    <p>The <code>angular-cli-ghpages</code> package makes deployment simple. Install it globally or add it to your project:</p>
+    <pre><code>npm install -g angular-cli-ghpages</code></pre>
+    <p>Alternatively, you can use the Angular CLI to add the tool, which will update your <code>angular.json</code>:</p>
+    <pre><code>ng add angular-cli-ghpages</code></pre>
+    <p>This command sets up a deploy target in your Angular configuration. If you have multiple projects in one workspace, specify your project name:</p>
+    <pre><code>ng add angular-cli-ghpages --project=my-angular-app</code></pre>
+    <h3>Step 3: Build and Deploy the App</h3>
+    <p>Before deploying, build your project for production. Be sure to set the <code>--base-href</code> to the repository name so that the app knows where it will be hosted:</p>
+    <pre><code>ng build --configuration production --base-href /your-repo/</code></pre>
+    <p>This command outputs the compiled files to <code>dist/my-angular-app</code>. Now deploy to GitHub Pages using <code>ng deploy</code> (which uses angular-cli-ghpages internally):</p>
+    <pre><code>ng deploy --base-href /your-repo/</code></pre>
+    <p>Alternatively, use <code>angular-cli-ghpages</code> directly:</p>
+    <pre><code>npx angular-cli-ghpages --dir=dist/my-angular-app</code></pre>
+    <p>Wait for the deployment to complete. You should see a message like “Successfully published!” in the console when done.</p>
+    <h3>Step 4: Verify the Deployment</h3>
+    <p>After deployment, open your browser and navigate to:</p>
+    <p><code>https://your-username.github.io/your-repo/</code></p>
+    <p>You should see your Angular app live on GitHub Pages. If you make updates to your app in the future, just rebuild and redeploy to publish the latest version.</p>
+    <h2>Conclusion</h2>
+    <p>Deploying an Angular 19 application to GitHub Pages is straightforward with the <code>angular-cli-ghpages</code> tool. By following this guide, you can quickly share your project online without needing a dedicated server. GitHub Pages handles the hosting for free, making it an ideal solution for front-end projects. Happy coding!</p> -->
+  </main>
+  <footer>
+    <p>© 2025 Developed by Vaibhav</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
